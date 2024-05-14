@@ -1,71 +1,73 @@
-'use client';
-
-import Head from 'next/head';
+import Link from 'next/link';
 import * as React from 'react';
 import '@/lib/env';
 
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
-
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
+import Arrow from '~/svg/Arrow.svg';
+import Facebook from '~/svg/Facebook.svg';
+import Instagram from '~/svg/Instagram.svg';
 import Logo from '~/svg/Logo.svg';
-
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
+import Whatsapp from '~/svg/Whatsapp.svg';
 
 export default function HomePage() {
   return (
-    <main>
-      <Head>
-        <title>Hi</title>
-      </Head>
-      <section className='bg-white'>
-        <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <Logo className='w-16' />
-          <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
-          <p className='mt-2 text-sm text-gray-800'>
-            A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-            Import, Seo, Link component, pre-configured with Husky{' '}
-          </p>
-          <p className='mt-2 text-sm text-gray-700'>
-            <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-              See the repository
-            </ArrowLink>
-          </p>
+    <main className='text-[#1A1A1A]'>
+      <section className='bg-white flex flex-col items-center pt-[20px] md:pt-[50px] px-[15px]  md:px-[78px] pb-[24px]  md:p-[30px]'>
+        <Link href='/'>
+          <Logo className='w-[87px] h-[68px] md:w-[143px] md:h-[111px]' />
+        </Link>
 
-          <ButtonLink className='mt-6' href='/components' variant='light'>
-            See all components
-          </ButtonLink>
+        <h1 className='mt-[120px] md:mt-[150px] text-[34px] leading-[34px] font-medium whitespace-nowrap md:text-[64px] md:leading-[64px]'>
+          Cooking Our Website.
+        </h1>
 
-          <UnstyledLink
-            href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-            className='mt-4'
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              width='92'
-              height='32'
-              src='https://vercel.com/button'
-              alt='Deploy with Vercel'
-            />
-          </UnstyledLink>
+        <Link
+          href='https://example.com'
+          target='_blank'
+          className='relative flex items-center justify-center mt-[110px] md:mt-[140px] w-[330px] md:w-[345px] h-[80px] md:h-[102px] border border-black rounded-[28px] hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'
+        >
+          <div className='absolute w-[calc(100%_+_4px)] bg-white h-[39px] md:h-[50px] z-1' />
+          <div className='absolute w-[280px] md:w-[293px] bg-white h-[calc(100%_+_4px)] z-1' />
+          <div className='relative z-2 flex items-start gap-x-[9px] md:gap-x-[14px] text-[20px] md:text-[30px] leading-[20px] md:leading-[30px]'>
+            RESERVE A TABLE
+            <Arrow className='w-[9px] md:w-[14px] h-[9px] md:h-[14px]' />
+          </div>
+        </Link>
 
-          <footer className='absolute bottom-2 text-gray-700'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-              Theodorus Clarence
-            </UnderlineLink>
-          </footer>
+        <div className='mt-[110px] md:mt-[150px] flex flex-col items-center gap-y-[18px]'>
+          <h2 className='text-[14px] md:text-[18px] leading-[14px] md:leading-[18px] font-normal'>
+            CONTACT US
+          </h2>
+          <ul className='flex gap-x-[10px]'>
+            <li className='hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'>
+              <Link href='https://example.com' target='_blank'>
+                <Whatsapp className='w-[48px] h-[48px]' />
+              </Link>
+            </li>
+            <li className='hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'>
+              <Link href='https://example.com' target='_blank'>
+                <Instagram className='w-[48px] h-[48px]' />
+              </Link>
+            </li>
+            <li className='hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'>
+              <Link href='https://example.com' target='_blank'>
+                <Facebook className='w-[48px] h-[48px]' />
+              </Link>
+            </li>
+          </ul>
         </div>
+
+        <footer className='mt-[60px] md:mt-[80px] flex flex-col items-center gap-y-[10px] text-[12px] leading-[12px]'>
+          <p>8:00-02:00</p>
+          <Link
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              'HATIB 8, HAIFA, ISRAEL'
+            )}`}
+            target='_blank'
+            className='hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'
+          >
+            HATIB 8, HAIFA, ISRAEL
+          </Link>
+        </footer>
       </section>
     </main>
   );

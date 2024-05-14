@@ -1,15 +1,9 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Satyricon",
   "icons": [
     {
-      "src": "/favicon/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon/android-chrome-512x512.png",
-      "sizes": "512x512",
+      "src": "/android-chrome-96x96.png",
+      "sizes": "96x96",
       "type": "image/png"
     }
   ],
