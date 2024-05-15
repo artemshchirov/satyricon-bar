@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import * as React from 'react';
+import { ReactNode } from 'react';
 
 import '@/styles/globals.css';
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.title,
-    images: [`${siteConfig.url}/images/og.jpg`],
+    images: [`${siteConfig.url}/images/og.png`],
     type: 'website',
     locale: 'en_US',
   },
@@ -32,24 +33,23 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/images/og.jpg`],
+    images: [`${siteConfig.url}/images/og.png`],
     // creator: '@artemshchirov',
   },
-  // authors: [
-  //   {
-  //     name: 'Artem Shchirov',
-  //     url: 'https://github.com/artemshchirov',
-  //   },
-  // ],
+  authors: [
+    {
+      url: 'https://artemshchirov.github.io/portfolio',
+    },
+  ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface Props {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: Readonly<Props>) {
   return (
-    <html>
+    <html lang='en'>
       <body>{children}</body>
     </html>
   );

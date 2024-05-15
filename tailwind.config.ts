@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        clash: ['Clash Grotesk', 'sans-serif'],
       },
       colors: {
         primary: {
