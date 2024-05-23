@@ -21,7 +21,7 @@ export default function HomePage() {
         </h1>
 
         <Link
-          href='https://example.com'
+          href='https://wa.me/message/3HBTAZOLJ6EKG1'
           target='_blank'
           className='relative flex items-center justify-center mt-[110px] md:mt-[140px] w-[330px] md:w-[345px] h-[80px] md:h-[102px] border border-black rounded-[28px] hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'
         >
@@ -39,17 +39,23 @@ export default function HomePage() {
           </h2>
           <ul className='flex gap-x-[10px]'>
             <li className='hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'>
-              <Link href='https://example.com' target='_blank'>
+              <Link href='https://wa.me/972542997710' target='_blank'>
                 <Whatsapp className='w-[48px] h-[48px]' />
               </Link>
             </li>
             <li className='hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'>
-              <Link href='https://example.com' target='_blank'>
+              <Link
+                href='https://www.instagram.com/satyricon_gastrobar'
+                target='_blank'
+              >
                 <Instagram className='w-[48px] h-[48px]' />
               </Link>
             </li>
             <li className='hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'>
-              <Link href='https://example.com' target='_blank'>
+              <Link
+                href='https://facebook.com/satyricongastrobar'
+                target='_blank'
+              >
                 <Facebook className='w-[48px] h-[48px]' />
               </Link>
             </li>
@@ -63,7 +69,7 @@ export default function HomePage() {
               'HATIB 8, HAIFA, ISRAEL'
             )}`}
             target='_blank'
-            className='font-clash hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'
+            className='font-clash hover:opacity-90 active:opacity-80 transition-opacity duration-100 ease-in-out'
           >
             HATIB 8, HAIFA, ISRAEL
           </Link>
