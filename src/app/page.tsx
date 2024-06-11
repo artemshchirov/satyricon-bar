@@ -21,7 +21,7 @@ export default function HomePage() {
         </h1>
 
         <Link
-          href='https://wa.me/message/3HBTAZOLJ6EKG1'
+          href='https://wa.me/972542997710'
           target='_blank'
           className='relative flex items-center justify-center mt-[110px] md:mt-[140px] w-[330px] md:w-[345px] h-[80px] md:h-[102px] border border-black rounded-[28px] hover:opacity-80 active:opacity-70 transition-opacity duration-100 ease-in-out'
         >
